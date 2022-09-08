@@ -1,8 +1,6 @@
 * {
     font-family: Arial;
 	font-size: 60;
-	
-
 }
  
 div.box
@@ -18,6 +16,7 @@ div.box
   margin: 20px;
 }
 
+a { text-decoration: none; color: black;}
 
 label.GirlName
 {
@@ -30,8 +29,6 @@ label.BoyName
   color: blue;
   padding: 8px;
 }
- 
- a { text-decoration: none; color: black;}
  
  label {
 
@@ -66,10 +63,15 @@ td.GirlName
 
 }
 
-
 td.BoyName
 {
 	color: blue;
 	  font-weight: bold;
 
+}
+
+img
+{
+	width: 275px;
+	height: 315px;
 }
