@@ -1,0 +1,75 @@
+* {
+    font-family: Arial;
+	font-size: 60;
+	
+
+}
+ 
+div.box
+{
+  border-radius: 25px;
+  background-color: #94f9d6;
+  background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 30px;
+  width: 910px;
+  height: 340px;
+  margin: 20px;
+}
+
+
+label.GirlName
+{
+  color: red;
+  padding: 8px;
+}
+ 
+label.BoyName
+{
+  color: blue;
+  padding: 8px;
+}
+ 
+ a { text-decoration: none; color: black;}
+ 
+ label {
+
+font-family: sans-serif;
+font-weight: 400;
+letter-spacing: 0.025rem;
+font-style: normal;
+text-transform: capitalize;
+color: #FFFFFF;
+background-color: #EF2D56;
+border-radius: 0.15rem;
+-webkit-border-radius: 0.15rem;
+-moz-border-radius: 0.15rem;
+padding: 0.3rem 0.4rem;
+border-style: none;
+border-width: 0rem;
+border-color: #EF2D56;
+-webkit-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
+-moz-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
+-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
+
+}
+th, td {
+  padding: 10px;
+
+}
+
+td.GirlName
+{
+	color: red;
+	  font-weight: bold;
+
+}
+
+
+td.BoyName
+{
+	color: blue;
+	  font-weight: bold;
+
+}
