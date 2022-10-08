@@ -456,20 +456,13 @@
 
                     var parent1NameValue = allStudents[i][columns[2]];
                     var parent1PhoneValue = allStudents[i][columns[3]];
-                    var parent11$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">myParent1</a></td></tr>'));
                     var parent1$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone="'+parent1PhoneValue+'">'+ parent1NameValue + '</a></td></tr>'));
-                    //var parent111$ = $('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">')
-                    //    .append($('555</a ></td ></tr >'));
-                    //var parent1$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">)')
-                    //    .html(parent1NameValue)).append($('</a></td></tr>'));
-
-                    //parent1$.append(html(parent1Value));
-                    //parent1$.append($('</a></td></tr>'));
                     kidTable$.append(parent1$);
 
                     var parent2NameValue = allStudents[i][columns[4]];
                     var parent2PhoneValue = allStudents[i][columns[5]];
-
+                    var parent2$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone="' + parent2PhoneValue + '">' + parent2NameValue + '</a></td></tr>'));
+                    kidTable$.append(parent2$);
 
                     var addressValue = allStudents[i][columns[6]];
 
@@ -523,7 +516,7 @@
 
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 3.0.1
+    ver 3.0.2
 
     <!--<table id="excelDataTable" border="1"></table>-->
     <!--<div id="excelDataTable" border="1"></div>-->
