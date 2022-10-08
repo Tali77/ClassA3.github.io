@@ -2,14 +2,20 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>דף קשר ג 3</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
     <link rel="icon" href="https://tali77.github.io/ClassA3.github.io/phoneBookIcon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="buttonsStyles.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+</head>
+
+
+<body>
+    ver 2.0.2
     <script>
-        var allStudents = [
+        var myList = [
             {
                 "firstName": "אוהד",
                 "lastName": "קופל",
@@ -415,119 +421,90 @@
             }
         ];
 
-        // Builds the HTML Table out of allStudents.
-        function buildHtmlTable_ORG(selector) {
-            var columns = addAllColumnHeaders(allStudents, selector);
 
-            for (var i = 0; i < allStudents.length; i++) {
-                var row$ = $('<tr/>');
-                for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-                    var cellValue = allStudents[i][columns[colIndex]];
-                    if (cellValue == null) cellValue = "";
-                    row$.append($('<td/>').html(cellValue));
-                }
-                $(selector).append(row$);
+    </script>
+    <input type="file" id="file_upload" src="Data\phonebook.xlsx" />
+    <button onclick="upload()">
+        Upload
+    </button>
+    <br>
+    <br>
+    <!-- container to display the json result -->
+    <textarea id="json-result" style="display:none;height:500px;width:350px;">
+    </textarea>
+    <script>
+        // Method to upload a valid excel file
+        function upload() {
+            // document.getElementById('file_upload').files ="Data\phonebook.xlsx";
+            var files = document.getElementById('file_upload').files;
+
+            if (files.length == 0) {
+                alert("Please choose any file...");
+                return;
+            }
+            var filename = files[0].name;
+
+            alert(files[0].name);
+
+            var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
+            if (extension == '.XLS' || extension == '.XLSX') {
+                excelFileToJSON(files[0]);
+            }
+            else {
+                alert("Please select a valid excel file.");
             }
         }
-
-
-        // Builds the HTML Table out of allStudents.
-        function buildHtmlTable(selector) {
-            var columns = addAllColumnHeaders(allStudents, selector);
-
-            for (var i = 0; i < allStudents.length; i++) {
-
-                var kidTable$ = $('<table class="box"/>');
-
-                var row$ = $('<tr/>');
-                var kidName$ = $('<tr><td rowspan="4"> <img class="Picture" src="KidPic\sampleKid.jpg"></td>');
-                for (var colIndex = 0; colIndex < columns.length; colIndex = columns.length) {
-                    var cellValue = allStudents[i][columns[colIndex]];
-                    if (cellValue == null) cellValue = "";
-                    row$.append($('<td/>').html(cellValue));
-
-                    var kidNameValue = allStudents[i][columns[0]] + ' ' + allStudents[i][columns[1]];
-                    //kidName$.append($('<tr><td class="BoyName">').html(kidNameValue).$('</td></tr>'));
-                    kidName$.append($('<tr><td class="BoyName">').html(kidNameValue));
-                    kidName$.append($('</td></tr>'));
-                    kidTable$.append(kidName$);
-
-                    var parent1NameValue = allStudents[i][columns[2]];
-                    var parent1PhoneValue = allStudents[i][columns[3]];
-                    var parent11$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">myParent1</a></td></tr>'));
-                    //var parent111$ = $('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">')
-                    //    .append($('555</a ></td ></tr >'));
-                    //var parent1$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">)')
-                    //    .html(parent1NameValue)).append($('</a></td></tr>'));
-
-                    //parent1$.append(html(parent1Value));
-                    //parent1$.append($('</a></td></tr>'));
-                    kidTable$.append(parent11$);
-
-                    var parent2NameValue = allStudents[i][columns[4]];
-                    var parent2PhoneValue = allStudents[i][columns[5]];
-
-
-                    var addressValue = allStudents[i][columns[6]];
-
-                    kidTable$.append('</table>');
-
-                }
-                $(selector).append(kidTable$);
-
-            }
-        }
-        // Adds a header row to the table and returns the set of columns.
-        // Need to do union of keys from all records as some records may not contain
-        // all records.
-        function addAllColumnHeaders_ORG(allStudents, selector) {
-            var columnSet = [];
-            var headerTr$ = $('<tr/>');
-
-            for (var i = 0; i < allStudents.length; i++) {
-                var rowHash = allStudents[i];
-                for (var key in rowHash) {
-                    if ($.inArray(key, columnSet) == -1) {
-                        columnSet.push(key);
-                        headerTr$.append($('<th/>').html(key));
+        //Method to read excel file and convert it into JSON
+        function excelFileToJSON(file) {
+            try {
+                var reader = new FileReader();
+                reader.readAsBinaryString(file);
+                reader.onload = function (e) {
+                    var data = e.target.result;
+                    var workbook = XLSX.read(data, {
+                        type: 'binary'
                     }
-                }
-            }
-            $(selector).append(headerTr$);
-
-            return columnSet;
-        }
-
-        function addAllColumnHeaders(allStudents, selector) {
-            var columnSet = [];
-            //var headerTr$ = $('<tr/>');
-
-            for (var i = 0; i < allStudents.length; i++) {
-                var rowHash = allStudents[i];
-                for (var key in rowHash) {
-                    if ($.inArray(key, columnSet) == -1) {
-                        columnSet.push(key);
-                        //headerTr$.append($('<th/>').html(key));
+                    );
+                    var result = {
+                    };
+                    workbook.SheetNames.forEach(function (sheetName) {
+                        var roa = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                        if (roa.length > 0) {
+                            result[sheetName] = roa;
+                        }
                     }
+                    );
+                    //displaying the json result
+                    var resultEle = document.getElementById("json-result");
+                    resultEle.value = JSON.stringify(result, null, 4);
+                    alert(result);
+                    resultEle.style.display = 'block';
                 }
             }
-            //$(selector).append(headerTr$);
-
-            return columnSet;
+            catch (e) {
+                console.error(e);
+            }
         }
     </script>
-</head>
-
-
-<body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 3.0.0
-
-    <!--<table id="excelDataTable" border="1"></table>-->
-    <!--<div id="excelDataTable" border="1"></div>-->
-    <div id="excelDataTable" border="1">
-
+    <div class="box">
+        <table>
+            <tr>
+                <td rowspan="4"> <img class="Picture" src="KidPic\sampleKid.jpg"></td>
+                <td class="BoyName">אברהם גיא</td>
+            </tr>
+            <tr>
+                <td> <button class="button-4" onclick="location.href='https://api.whatsapp.com/send?phone=972523251680'" type="button"><img class="btnImg" src="Icons\icons8-whatsapp-50.png">אליזה</button></td>
+            </tr>
+            <tr>
+                <td><button class="button-4" onclick="location.href='https://api.whatsapp.com/send?phone=972537774291'" type="button"> <img class="btnImg" src="Icons\icons8-whatsapp-50.png">רן</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button-4" onclick="location.href='https://maps.google.com/?q=העצמאות 73 פתח תקווה'" type="button"><img class="btnImg" src="Icons\googlemaps.png"> העצמאות 73</button>
+                </td>
+            </tr>
+        </table>
     </div>
-
 
 </body>
 </html>

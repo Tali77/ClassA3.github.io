@@ -1,464 +1,534 @@
 <html title="דף קשר ג 3" dir="rtl">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>דף קשר ג 3</title>   
+    <title>דף קשר ג 3</title>
     <link rel="icon" href="https://tali77.github.io/ClassA3.github.io/phoneBookIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="buttonsStyles.css">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
-	<script>
-	var myList = [
- {
-   "firstName": "אוהד",
-   "lastName": "קופל",
-   "paren1": "אסנת",
-   "parent1Phone": 972544436201,
-   "paren2": "שי",
-   "paren2Phone": 972508754835,
-   "address": "יוסף נקר 33 דירה 7 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "אורי",
-   "lastName": "גוילי",
-   "paren1": "פרח",
-   "parent1Phone": 972522892876,
-   "paren2": "רונן",
-   "paren2Phone": 972545545729,
-   "address": "קפלנסקי 67 דירה 22 פ\"ת",
-   "picture": "OriG.jpg",
-   "dateBirth": "30.9.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "אורי",
-   "lastName": "פז",
-   "paren1": "דיאן",
-   "parent1Phone": 972542000188,
-   "paren2": "דותן",
-   "paren2Phone": 972528646503,
-   "address": "יוסף נקר 39 דירה 11 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "אלמה",
-   "lastName": "אגמי",
-   "paren1": "ויקי ",
-   "parent1Phone": 972523000000,
-   "paren2": "",
-   "paren2Phone": null,
-   "address": "ישראל עידוד 5 פ\"ת",
-   "picture": "AlmaAgamy.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": "בן"
- },
- {
-   "firstName": "אלמה",
-   "lastName": "ורד",
-   "paren1": "גו'זי",
-   "parent1Phone": 972504939175,
-   "paren2": "ברק",
-   "paren2Phone": 972504939175,
-   "address": "בן גוריון 34 דירה 19 פ\"ת",
-   "picture": "",
-   "dateBirth": "04.08.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "אמילי",
-   "lastName": "גולוב",
-   "paren1": "אפרת",
-   "parent1Phone": 972546538090,
-   "paren2": "ארטם",
-   "paren2Phone": 972549936539,
-   "address": "העצמאות 73 דירה 13 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "ארי",
-   "lastName": "אורינגר",
-   "paren1": "שרון",
-   "parent1Phone": 972543551600,
-   "paren2": "עודד",
-   "paren2Phone": 972543551700,
-   "address": "בן גוריון 41 דירה 13 פ\"ת",
-   "picture": "Ari.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "אריאל",
-   "lastName": "יהונתן",
-   "paren1": "נטלי",
-   "parent1Phone": 972543131900,
-   "paren2": "דורון",
-   "paren2Phone": 972544344911,
-   "address": "הניצנים 16 א פ\"ת",
-   "picture": "Ariel.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "גאיה",
-   "lastName": "פרטוש",
-   "paren1": "אימבר    ",
-   "parent1Phone": 972544622230,
-   "paren2": "אורי",
-   "paren2Phone": 972544623737,
-   "address": "שמחי דוד 7 דירה 34 קומה 9",
-   "picture": "gaya.jpg",
-   "dateBirth": "20.6.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "גיא",
-   "lastName": "אברהם",
-   "paren1": "אליזה",
-   "parent1Phone": 972523251680,
-   "paren2": "רן",
-   "paren2Phone": 972537774291,
-   "address": "העצמאות 73 דירה 7 פ\"ת",
-   "picture": "Guy.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "דניאל",
-   "lastName": "לוי",
-   "paren1": "שרון",
-   "parent1Phone": 972544460209,
-   "paren2": "שלומי",
-   "paren2Phone": 972546301169,
-   "address": "מייזנר 3 דירה 20 קומה 5 פ\"ת",
-   "picture": "DanielLevi.jpg",
-   "dateBirth": "27.4.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "דניאל",
-   "lastName": "שמואלי",
-   "paren1": "טליה",
-   "parent1Phone": 972522207747,
-   "paren2": "שרון",
-   "paren2Phone": 972522650929,
-   "address": "מייזנר 15 דירה 24 פ\"ת",
-   "picture": "DanielS.jpg",
-   "dateBirth": "17.10.2013",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "הודיה",
-   "lastName": "חלאוי",
-   "paren1": "צופיה",
-   "parent1Phone": 972543090967,
-   "paren2": "אורן",
-   "paren2Phone": 972548050049,
-   "address": "העצמאות 83 דירה 16 פ\"ת",
-   "picture": "Hodaia.jpeg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "הילה",
-   "lastName": "לב",
-   "paren1": "רינת",
-   "parent1Phone": 972533055939,
-   "paren2": "בני",
-   "paren2Phone": 972506220185,
-   "address": "חיים זכאי 12 דירה 1 פ\"ת",
-   "picture": "Hila.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "הילה",
-   "lastName": "קאופמן",
-   "paren1": "יואי",
-   "parent1Phone": 972544301689,
-   "paren2": "אלכס",
-   "paren2Phone": 972542237000,
-   "address": "יוסף נקר 39 דירה 4 פ\"ת",
-   "picture": "",
-   "dateBirth": "15.4.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "הללי",
-   "lastName": "ריגאן",
-   "paren1": "יסמין   ",
-   "parent1Phone": 972505077333,
-   "paren2": "גבריאל",
-   "paren2Phone": 972523148844,
-   "address": "יוסף נקר 33 דירה 6 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "יאיר",
-   "lastName": "בר דויד",
-   "paren1": "מיטל",
-   "parent1Phone": 972549002777,
-   "paren2": "שגיב",
-   "paren2Phone": 972544475678,
-   "address": "לאה אמסטר 10 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "יובל",
-   "lastName": "ברק",
-   "paren1": "מאיה",
-   "parent1Phone": 972523636595,
-   "paren2": "אורן",
-   "paren2Phone": 972543941594,
-   "address": "העצמאות 67 דירה 3 פ\"ת",
-   "picture": "YuvalB.jpg",
-   "dateBirth": "12.5.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "יובל",
-   "lastName": "קסלר",
-   "paren1": "אורלי",
-   "parent1Phone": 972504014924,
-   "paren2": "מיכאל",
-   "paren2Phone": 972523122475,
-   "address": "עמנואל זמיר 12 דירה 1 פ\"ת",
-   "picture": "",
-   "dateBirth": "22.9.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "יונתן",
-   "lastName": "שגלוב",
-   "paren1": "אלונה ",
-   "parent1Phone": 972542392272,
-   "paren2": "בוריס ",
-   "paren2Phone": 972542265157,
-   "address": "העצמאות 97 דירה 7 פ״ת",
-   "picture": "Johnathan.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "ינאי",
-   "lastName": "בן אהרון",
-   "paren1": "אתי",
-   "parent1Phone": 972546224994,
-   "paren2": "שלומי",
-   "paren2Phone": 972548885446,
-   "address": "בן גוריון 34 דירה 1 פ\"ת",
-   "picture": "Yanai.png",
-   "dateBirth": "01.06.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "יעל",
-   "lastName": "ברקוביץ",
-   "paren1": "אינה",
-   "parent1Phone": 972527909388,
-   "paren2": "רדי",
-   "paren2Phone": 972545348059,
-   "address": "יטקובסקי 42 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "ליבי",
-   "lastName": "קווה קיסר",
-   "paren1": "הילה",
-   "parent1Phone": 972542585758,
-   "paren2": "רון",
-   "paren2Phone": 972507500943,
-   "address": "עמנואל זמיר 4 דירה 18",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "מאי",
-   "lastName": "פלק",
-   "paren1": "אנה",
-   "parent1Phone": 972506826095,
-   "paren2": "הראל",
-   "paren2Phone": 972544331875,
-   "address": "בן גוריון 23 דירה 9 פ\"ת",
-   "picture": "Mai.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "מתן",
-   "lastName": "פישר",
-   "paren1": "לימור",
-   "parent1Phone": 972524831204,
-   "paren2": "מרק",
-   "paren2Phone": 972544750146,
-   "address": "משה אויערבך 4/38 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "נועה",
-   "lastName": "אפטוויצר",
-   "paren1": "הילה",
-   "parent1Phone": 972546485889,
-   "paren2": "אריאל",
-   "paren2Phone": 972505113454,
-   "address": "ניגונים 37 פ\"ת",
-   "picture": "",
-   "dateBirth": "16.5.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "נטע",
-   "lastName": "שבחון",
-   "paren1": "ליהי",
-   "parent1Phone": 972505421413,
-   "paren2": "יוסי",
-   "paren2Phone": 972542091995,
-   "address": "יוסף נקר 42 דירה 19 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "עופרי",
-   "lastName": "מואס",
-   "paren1": "אורלי כהן מואס",
-   "parent1Phone": 972523597664,
-   "paren2": "אסף",
-   "paren2Phone": 972547859997,
-   "address": "העצמאות 79, דירה 1 פ\"ת",
-   "picture": "",
-   "dateBirth": "2.4.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "עידו",
-   "lastName": "שליט",
-   "paren1": "נעמה",
-   "parent1Phone": 972504228346,
-   "paren2": "נאור",
-   "paren2Phone": 972545976683,
-   "address": "יוסף נקר 34 דירה 4 פ\"ת",
-   "picture": "ido.png",
-   "dateBirth": "2.7.2014",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "עמית",
-   "lastName": "טוטנאור",
-   "paren1": "הדר",
-   "parent1Phone": 972524405461,
-   "paren2": "דני",
-   "paren2Phone": 972544905481,
-   "address": "ניגונים 28 פ\"ת",
-   "picture": "",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- },
- {
-   "firstName": "עמליה",
-   "lastName": "גרנית",
-   "paren1": "נועה",
-   "parent1Phone": 972546383929,
-   "paren2": "אלון",
-   "paren2Phone": 972547747120,
-   "address": "חיים זכאי 2 , דירה 6 פ\"ת",
-   "picture": "AmaliaG.jpg",
-   "dateBirth": "",
-   "מגדר": "",
-   "FIELD11": ""
- }
-];
 
-// Builds the HTML Table out of myList.
-function buildHtmlTable(selector) {
-  var columns = addAllColumnHeaders(myList, selector);
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  for (var i = 0; i < myList.length; i++) {
-    var row$ = $('<tr/>');
-    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-      var cellValue = myList[i][columns[colIndex]];
-      if (cellValue == null) cellValue = "";
-      row$.append($('<td/>').html(cellValue));
-    }
-    $(selector).append(row$);
-  }
-}
+    <script>
+        var allStudents = [
+            {
+                "firstName": "אוהד",
+                "lastName": "קופל",
+                "paren1": "אסנת",
+                "parent1Phone": 972544436201,
+                "paren2": "שי",
+                "paren2Phone": 972508754835,
+                "address": "יוסף נקר 33 דירה 7 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "אורי",
+                "lastName": "גוילי",
+                "paren1": "פרח",
+                "parent1Phone": 972522892876,
+                "paren2": "רונן",
+                "paren2Phone": 972545545729,
+                "address": "קפלנסקי 67 דירה 22 פ\"ת",
+                "picture": "OriG.jpg",
+                "dateBirth": "30.9.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "אורי",
+                "lastName": "פז",
+                "paren1": "דיאן",
+                "parent1Phone": 972542000188,
+                "paren2": "דותן",
+                "paren2Phone": 972528646503,
+                "address": "יוסף נקר 39 דירה 11 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "אלמה",
+                "lastName": "אגמי",
+                "paren1": "ויקי ",
+                "parent1Phone": 972523000000,
+                "paren2": "",
+                "paren2Phone": null,
+                "address": "ישראל עידוד 5 פ\"ת",
+                "picture": "AlmaAgamy.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": "בן"
+            },
+            {
+                "firstName": "אלמה",
+                "lastName": "ורד",
+                "paren1": "גו'זי",
+                "parent1Phone": 972504939175,
+                "paren2": "ברק",
+                "paren2Phone": 972504939175,
+                "address": "בן גוריון 34 דירה 19 פ\"ת",
+                "picture": "",
+                "dateBirth": "04.08.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "אמילי",
+                "lastName": "גולוב",
+                "paren1": "אפרת",
+                "parent1Phone": 972546538090,
+                "paren2": "ארטם",
+                "paren2Phone": 972549936539,
+                "address": "העצמאות 73 דירה 13 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "ארי",
+                "lastName": "אורינגר",
+                "paren1": "שרון",
+                "parent1Phone": 972543551600,
+                "paren2": "עודד",
+                "paren2Phone": 972543551700,
+                "address": "בן גוריון 41 דירה 13 פ\"ת",
+                "picture": "Ari.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "אריאל",
+                "lastName": "יהונתן",
+                "paren1": "נטלי",
+                "parent1Phone": 972543131900,
+                "paren2": "דורון",
+                "paren2Phone": 972544344911,
+                "address": "הניצנים 16 א פ\"ת",
+                "picture": "Ariel.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "גאיה",
+                "lastName": "פרטוש",
+                "paren1": "אימבר    ",
+                "parent1Phone": 972544622230,
+                "paren2": "אורי",
+                "paren2Phone": 972544623737,
+                "address": "שמחי דוד 7 דירה 34 קומה 9",
+                "picture": "gaya.jpg",
+                "dateBirth": "20.6.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "גיא",
+                "lastName": "אברהם",
+                "paren1": "אליזה",
+                "parent1Phone": 972523251680,
+                "paren2": "רן",
+                "paren2Phone": 972537774291,
+                "address": "העצמאות 73 דירה 7 פ\"ת",
+                "picture": "Guy.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "דניאל",
+                "lastName": "לוי",
+                "paren1": "שרון",
+                "parent1Phone": 972544460209,
+                "paren2": "שלומי",
+                "paren2Phone": 972546301169,
+                "address": "מייזנר 3 דירה 20 קומה 5 פ\"ת",
+                "picture": "DanielLevi.jpg",
+                "dateBirth": "27.4.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "דניאל",
+                "lastName": "שמואלי",
+                "paren1": "טליה",
+                "parent1Phone": 972522207747,
+                "paren2": "שרון",
+                "paren2Phone": 972522650929,
+                "address": "מייזנר 15 דירה 24 פ\"ת",
+                "picture": "DanielS.jpg",
+                "dateBirth": "17.10.2013",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "הודיה",
+                "lastName": "חלאוי",
+                "paren1": "צופיה",
+                "parent1Phone": 972543090967,
+                "paren2": "אורן",
+                "paren2Phone": 972548050049,
+                "address": "העצמאות 83 דירה 16 פ\"ת",
+                "picture": "Hodaia.jpeg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "הילה",
+                "lastName": "לב",
+                "paren1": "רינת",
+                "parent1Phone": 972533055939,
+                "paren2": "בני",
+                "paren2Phone": 972506220185,
+                "address": "חיים זכאי 12 דירה 1 פ\"ת",
+                "picture": "Hila.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "הילה",
+                "lastName": "קאופמן",
+                "paren1": "יואי",
+                "parent1Phone": 972544301689,
+                "paren2": "אלכס",
+                "paren2Phone": 972542237000,
+                "address": "יוסף נקר 39 דירה 4 פ\"ת",
+                "picture": "",
+                "dateBirth": "15.4.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "הללי",
+                "lastName": "ריגאן",
+                "paren1": "יסמין   ",
+                "parent1Phone": 972505077333,
+                "paren2": "גבריאל",
+                "paren2Phone": 972523148844,
+                "address": "יוסף נקר 33 דירה 6 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "יאיר",
+                "lastName": "בר דויד",
+                "paren1": "מיטל",
+                "parent1Phone": 972549002777,
+                "paren2": "שגיב",
+                "paren2Phone": 972544475678,
+                "address": "לאה אמסטר 10 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "יובל",
+                "lastName": "ברק",
+                "paren1": "מאיה",
+                "parent1Phone": 972523636595,
+                "paren2": "אורן",
+                "paren2Phone": 972543941594,
+                "address": "העצמאות 67 דירה 3 פ\"ת",
+                "picture": "YuvalB.jpg",
+                "dateBirth": "12.5.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "יובל",
+                "lastName": "קסלר",
+                "paren1": "אורלי",
+                "parent1Phone": 972504014924,
+                "paren2": "מיכאל",
+                "paren2Phone": 972523122475,
+                "address": "עמנואל זמיר 12 דירה 1 פ\"ת",
+                "picture": "",
+                "dateBirth": "22.9.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "יונתן",
+                "lastName": "שגלוב",
+                "paren1": "אלונה ",
+                "parent1Phone": 972542392272,
+                "paren2": "בוריס ",
+                "paren2Phone": 972542265157,
+                "address": "העצמאות 97 דירה 7 פ״ת",
+                "picture": "Johnathan.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "ינאי",
+                "lastName": "בן אהרון",
+                "paren1": "אתי",
+                "parent1Phone": 972546224994,
+                "paren2": "שלומי",
+                "paren2Phone": 972548885446,
+                "address": "בן גוריון 34 דירה 1 פ\"ת",
+                "picture": "Yanai.png",
+                "dateBirth": "01.06.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "יעל",
+                "lastName": "ברקוביץ",
+                "paren1": "אינה",
+                "parent1Phone": 972527909388,
+                "paren2": "רדי",
+                "paren2Phone": 972545348059,
+                "address": "יטקובסקי 42 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "ליבי",
+                "lastName": "קווה קיסר",
+                "paren1": "הילה",
+                "parent1Phone": 972542585758,
+                "paren2": "רון",
+                "paren2Phone": 972507500943,
+                "address": "עמנואל זמיר 4 דירה 18",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "מאי",
+                "lastName": "פלק",
+                "paren1": "אנה",
+                "parent1Phone": 972506826095,
+                "paren2": "הראל",
+                "paren2Phone": 972544331875,
+                "address": "בן גוריון 23 דירה 9 פ\"ת",
+                "picture": "Mai.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "מתן",
+                "lastName": "פישר",
+                "paren1": "לימור",
+                "parent1Phone": 972524831204,
+                "paren2": "מרק",
+                "paren2Phone": 972544750146,
+                "address": "משה אויערבך 4/38 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "נועה",
+                "lastName": "אפטוויצר",
+                "paren1": "הילה",
+                "parent1Phone": 972546485889,
+                "paren2": "אריאל",
+                "paren2Phone": 972505113454,
+                "address": "ניגונים 37 פ\"ת",
+                "picture": "",
+                "dateBirth": "16.5.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "נטע",
+                "lastName": "שבחון",
+                "paren1": "ליהי",
+                "parent1Phone": 972505421413,
+                "paren2": "יוסי",
+                "paren2Phone": 972542091995,
+                "address": "יוסף נקר 42 דירה 19 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "עופרי",
+                "lastName": "מואס",
+                "paren1": "אורלי כהן מואס",
+                "parent1Phone": 972523597664,
+                "paren2": "אסף",
+                "paren2Phone": 972547859997,
+                "address": "העצמאות 79, דירה 1 פ\"ת",
+                "picture": "",
+                "dateBirth": "2.4.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "עידו",
+                "lastName": "שליט",
+                "paren1": "נעמה",
+                "parent1Phone": 972504228346,
+                "paren2": "נאור",
+                "paren2Phone": 972545976683,
+                "address": "יוסף נקר 34 דירה 4 פ\"ת",
+                "picture": "ido.png",
+                "dateBirth": "2.7.2014",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "עמית",
+                "lastName": "טוטנאור",
+                "paren1": "הדר",
+                "parent1Phone": 972524405461,
+                "paren2": "דני",
+                "paren2Phone": 972544905481,
+                "address": "ניגונים 28 פ\"ת",
+                "picture": "",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            },
+            {
+                "firstName": "עמליה",
+                "lastName": "גרנית",
+                "paren1": "נועה",
+                "parent1Phone": 972546383929,
+                "paren2": "אלון",
+                "paren2Phone": 972547747120,
+                "address": "חיים זכאי 2 , דירה 6 פ\"ת",
+                "picture": "AmaliaG.jpg",
+                "dateBirth": "",
+                "מגדר": "",
+                "FIELD11": ""
+            }
+        ];
 
-// Adds a header row to the table and returns the set of columns.
-// Need to do union of keys from all records as some records may not contain
-// all records.
-function addAllColumnHeaders(myList, selector) {
-  var columnSet = [];
-  var headerTr$ = $('<tr/>');
+        // Builds the HTML Table out of allStudents.
+        function buildHtmlTable_ORG(selector) {
+            var columns = addAllColumnHeaders(allStudents, selector);
 
-  for (var i = 0; i < myList.length; i++) {
-    var rowHash = myList[i];
-    for (var key in rowHash) {
-      if ($.inArray(key, columnSet) == -1) {
-        columnSet.push(key);
-        headerTr$.append($('<th/>').html(key));
-      }
-    }
-  }
-  $(selector).append(headerTr$);
+            for (var i = 0; i < allStudents.length; i++) {
+                var row$ = $('<tr/>');
+                for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                    var cellValue = allStudents[i][columns[colIndex]];
+                    if (cellValue == null) cellValue = "";
+                    row$.append($('<td/>').html(cellValue));
+                }
+                $(selector).append(row$);
+            }
+        }
 
-  return columnSet;
-}
-	</script>
+
+        // Builds the HTML Table out of allStudents.
+        function buildHtmlTable(selector) {
+            var columns = addAllColumnHeaders(allStudents, selector);
+
+            for (var i = 0; i < allStudents.length; i++) {
+
+                var kidTable$ = $('<table class="box"/>');
+
+                var row$ = $('<tr/>');
+                var kidName$ = $('<tr><td rowspan="4"> <img class="Picture" src="KidPic\sampleKid.jpg"></td>');
+                for (var colIndex = 0; colIndex < columns.length; colIndex = columns.length)
+                {
+                    var cellValue = allStudents[i][columns[colIndex]];
+                    if (cellValue == null) cellValue = "";
+                    row$.append($('<td/>').html(cellValue));
+
+                    var kidNameValue = allStudents[i][columns[0]] + ' ' + allStudents[i][columns[1]];
+                    //kidName$.append($('<tr><td class="BoyName">').html(kidNameValue).$('</td></tr>'));
+                    kidName$.append($('<tr><td class="BoyName">').html(kidNameValue));
+                    kidName$.append($('</td></tr>'));
+                    kidTable$.append(kidName$);
+
+                    var parent1NameValue = allStudents[i][columns[2]];
+                    var parent1PhoneValue = allStudents[i][columns[3]];
+                    var parent11$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">myParent1</a></td></tr>'));
+                    //var parent111$ = $('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">')
+                    //    .append($('555</a ></td ></tr >'));
+                    //var parent1$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">)')
+                    //    .html(parent1NameValue)).append($('</a></td></tr>'));
+
+                    //parent1$.append(html(parent1Value));
+                    //parent1$.append($('</a></td></tr>'));
+                    kidTable$.append(parent11$);
+
+                    var parent2NameValue = allStudents[i][columns[4]];
+                    var parent2PhoneValue = allStudents[i][columns[5]];
+
+
+                    var addressValue = allStudents[i][columns[6]];
+
+                    kidTable$.append('</table>');
+
+                }
+                $(selector).append(kidTable$);
+
+            }
+        }
+        // Adds a header row to the table and returns the set of columns.
+        // Need to do union of keys from all records as some records may not contain
+        // all records.
+        function addAllColumnHeaders_ORG(allStudents, selector) {
+            var columnSet = [];
+            var headerTr$ = $('<tr/>');
+
+            for (var i = 0; i < allStudents.length; i++) {
+                var rowHash = allStudents[i];
+                for (var key in rowHash) {
+                    if ($.inArray(key, columnSet) == -1) {
+                        columnSet.push(key);
+                        headerTr$.append($('<th/>').html(key));
+                    }
+                }
+            }
+            $(selector).append(headerTr$);
+
+            return columnSet;
+        }
+
+        function addAllColumnHeaders(allStudents, selector) {
+            var columnSet = [];
+            //var headerTr$ = $('<tr/>');
+
+            for (var i = 0; i < allStudents.length; i++) {
+                var rowHash = allStudents[i];
+                for (var key in rowHash) {
+                    if ($.inArray(key, columnSet) == -1) {
+                        columnSet.push(key);
+                        //headerTr$.append($('<th/>').html(key));
+                    }
+                }
+            }
+            //$(selector).append(headerTr$);
+
+            return columnSet;
+        }
+    </script>
 </head>
 
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 2.0.4
-    
-   
-  <table id="excelDataTable" border="1">
-  </table>
+    ver 2.0.6
+
+    <!--<table id="excelDataTable" border="1"></table>-->
+    <!--<div id="excelDataTable" border="1"></div>-->
+    <div id="excelDataTable" border="1">
+        
+    </div>
+
+
 </body>
 </html>
