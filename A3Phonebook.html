@@ -440,7 +440,9 @@
                 var kidTable$ = $('<table class="box"/>');
 
                 var row$ = $('<tr/>');
-                var kidName$ = $('<tr><td rowspan="4"> <img class="Picture" src="KidPic\sampleKid.jpg"></td>');
+                var KidPicValue = allStudents[i][columns[7]];
+                var kidName$ = $('<tr><td rowspan="4"> <img class="Picture"  src="KidPic/'+ KidPicValue + '"></td>');
+
                 for (var colIndex = 0; colIndex < columns.length; colIndex = columns.length) {
                     var cellValue = allStudents[i][columns[colIndex]];
                     if (cellValue == null) cellValue = "";
@@ -455,6 +457,7 @@
                     var parent1NameValue = allStudents[i][columns[2]];
                     var parent1PhoneValue = allStudents[i][columns[3]];
                     var parent11$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">myParent1</a></td></tr>'));
+                    var parent1$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">'+ parent1NameValue + '</a></td></tr>'));
                     //var parent111$ = $('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">')
                     //    .append($('555</a ></td ></tr >'));
                     //var parent1$ = ($('<tr> <td> <a href="https://api.whatsapp.com/send?phone=972522649640">)')
@@ -462,7 +465,7 @@
 
                     //parent1$.append(html(parent1Value));
                     //parent1$.append($('</a></td></tr>'));
-                    kidTable$.append(parent11$);
+                    kidTable$.append(parent1$);
 
                     var parent2NameValue = allStudents[i][columns[4]];
                     var parent2PhoneValue = allStudents[i][columns[5]];
