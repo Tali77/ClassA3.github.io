@@ -22,8 +22,8 @@ table.box {
     background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
     background-position: left top;
     background-repeat: repeat;
-    padding: 30px;
-    width: 870px;
+    padding: 10px;
+    
     height: 360px;
     margin: 20px;
 }
