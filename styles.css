@@ -1,6 +1,6 @@
 * {
     font-family: Arial;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 html, body{
@@ -74,13 +74,13 @@ th, td {
     td.GirlName {
         color: red;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     td.BoyName {
         color: blue;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 25px;
     }
 
 img.Picture {
