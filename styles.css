@@ -1,6 +1,6 @@
 * {
     font-family: Arial;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 div.box {
@@ -70,11 +70,13 @@ th, td {
     td.GirlName {
         color: red;
         font-weight: bold;
+        font-size: 30px;
     }
 
     td.BoyName {
-        color: blue; 
+        color: blue;
         font-weight: bold;
+        font-size: 30px;
     }
 
 img.Picture {
