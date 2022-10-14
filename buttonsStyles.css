@@ -13,7 +13,7 @@
   line-height: 29px;
   padding: 0 10px 0 11px;
   position: relative;
-  text-align: center;
+  text-align: right;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
@@ -43,9 +43,9 @@
   color: #24292E;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 60px;
-  font-weight: 500;
+  
+  
+  
   line-height: 70px;
   list-style: none;
   padding: 6px 16px;
@@ -57,7 +57,7 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
-  width: 550px;
+  
   
 }
 

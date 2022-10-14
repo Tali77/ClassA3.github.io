@@ -1,97 +1,89 @@
 * {
     font-family: Arial;
-	font-size: 60;
+    font-size: 60;
 }
- 
-div.box
-{
-  border-radius: 25px;
-  background-color: #94f9d6;
-  background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
-  background-position: left top;
-  background-repeat: repeat;
-  padding: 30px;
-  width: 870px;
-  height: 360px;
-  margin: 20px;
+
+div.box {
+    border-radius: 25px;
+    background-color: #94f9d6;
+    background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 30px;
+    width: 870px;
+    height: 360px;
+    margin: 20px;
 }
 
 
 table.box {
-	border-radius: 25px;
-	background-color: #94f9d6;
-	background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
-	background-position: left top;
-	background-repeat: repeat;
-	padding: 30px;
-	width: 870px;
-	height: 360px;
-	margin: 20px;
+    border-radius: 25px;
+    background-color: #94f9d6;
+    background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 30px;
+    width: 870px;
+    height: 360px;
+    margin: 20px;
 }
 
-a { text-decoration: none; color: black;}
-
-label.GirlName
-{
-  color: red;
-  padding: 8px;
+a {
+    text-decoration: none;
+    color: black;
 }
- 
-label.BoyName
-{
-  color: blue;
-  padding: 8px;
-}
- 
- label {
 
-font-family: sans-serif;
-font-weight: 400;
-letter-spacing: 0.025rem;
-font-style: normal;
-text-transform: capitalize;
-color: #FFFFFF;
-background-color: #EF2D56;
-border-radius: 0.15rem;
--webkit-border-radius: 0.15rem;
--moz-border-radius: 0.15rem;
-padding: 0.3rem 0.4rem;
-border-style: none;
-border-width: 0rem;
-border-color: #EF2D56;
--webkit-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
--moz-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
--box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
-
+label.GirlName {
+    color: red;
+    padding: 8px;
 }
+
+label.BoyName {
+    color: blue;
+    padding: 8px;
+}
+
+label {
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #EF2D56;
+    border-radius: 0.15rem;
+    -webkit-border-radius: 0.15rem;
+    -moz-border-radius: 0.15rem;
+    padding: 0.3rem 0.4rem;
+    border-style: none;
+    border-width: 0rem;
+    border-color: #EF2D56;
+    -webkit-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
+    -moz-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
+    -box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
+}
+
 th, td {
-  padding: 10px;
-
+    padding: 10px;
 }
 
-td.GirlName
-{
-	color: red;
-	  font-weight: bold;
+    td.GirlName {
+        color: red;
+        font-weight: bold;
+    }
 
-}
+    td.BoyName {
+        color: blue;
+        font-weight: bold;
+    }
 
-td.BoyName
-{
-	color: blue;
-	  font-weight: bold;
-
-}
-
-img.Picture
-{
-	width: 275px;
-	height: 315px;
+img.Picture {
+    width: 275px;
+    height: 305px;
 }
 
 
-img.btnImg
-{
-	width: 50px;
-	height: 50px;
+img.btnImg {
+    width: 50px;
+    height: 50px;
 }
