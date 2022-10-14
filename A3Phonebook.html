@@ -499,7 +499,7 @@
 
             for (var i = 0; i < allStudents.length; i++) {
 
-                var kidTable$ = $('<table class="box" border="1"/>');
+                var kidTable$ = $('<table class="box"/>');
 
                 // var row$ = $('<tr/>');
                 var KidPicValue = allStudents[i][columns[7]];
@@ -522,31 +522,24 @@
 
                     var parent1NameValue = allStudents[i][columns[2]];
                     var parent1PhoneValue = allStudents[i][columns[3]];
-                    var parent1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png">' + parent1NameValue + '</button></td></tr>'));
+                    var parent1_1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png">' + parent1NameValue + '</button></td></tr>'));
+                    var parent1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png"></button>' + parent1NameValue + '</td></tr>'));
                     kidTable$.append(parent1$);
 
 
                     var parent2NameValue = allStudents[i][columns[4]];
 
                     var parent2PhoneValue = allStudents[i][columns[5]];
-                    var parent2$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent2PhoneValue + '\' type="button"> <img class="btnImg" src="Icons/icons8-whatsapp-50.png">' + parent2NameValue + '</button></td></tr>'));
+                    var parent2$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent2PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png"></button>' + parent2NameValue + '</td></tr>'));
                     if (parent2NameValue != "")
                         kidTable$.append(parent2$);
 
                     var addressValue = allStudents[i][columns[6]];
                     var fullAddressValue = allStudents[i][columns[10]];
-                    var address$ = ($('<tr> <td> <button class="button-4" onclick="location.href=\'https://maps.google.com/maps?q=' + fullAddressValue + '\'" type="button"><img class="btnImg" src="Icons/googlemaps.png">' + addressValue + '</button></td></tr>'));
-                    var address1$ = ($('<tr> <td> <button class="button-4" onclick="location.href="https://maps.google.com/?q=' + fullAddressValue + ' type="button"><img class="btnImg" src="Icons/googlemaps.png">' + addressValue + '</button></td></tr>'));
-                    var address2$ = ($('<tr> <td> <button class="button-4"  onclick=location.href=\'http://maps.google.com/maps?q=יוסף נקר 33 פתח תקווה\'"  type="button"><img class="btnImg" src="Icons/googlemaps.png">' + addressValue + '</button></td></tr>'));
-                    //<button class="button-4" onclick="location.href='http://maps.google.com/maps?q=הלפיד 6 רמת גן'" type="button"><img class="btnImg" src="Icons/googlemaps.png">    הלפיד 6  </button>
+                    var address_1$ = ($('<tr> <td> <button class="button-4" onclick="location.href=\'https://maps.google.com/maps?q=' + fullAddressValue + '\'" type="button"><img class="btnImg" src="Icons/googlemaps.png">' + addressValue + '</button></td></tr>'));
+                    var address$ = ($('<tr> <td> <button class="button-4" onclick="location.href=\'https://maps.google.com/maps?q=' + fullAddressValue + '\'" type="button"><img class="btnImg" src="Icons/googlemaps.png"></button>' + addressValue + '</td></tr>'));
 
                     kidTable$.append(address$);
-
-                    //<td>
-                    //    <button class="button-4" onclick="location.href='https://maps.google.com/?q=העצמאות 73 פתח תקווה'" type="button"><img class="btnImg" src="Icons\googlemaps.png"> העצמאות 73</button>
-                    //</td>
-
-
 
                     kidTable$.append('</table>');
 
@@ -598,9 +591,9 @@
 
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 4.0.14
+    ver 4.1.0
      
-    <div id="excelDataTable" border="1"/>
+    <div id="excelDataTable"/>
      
 </body>
 </html>
