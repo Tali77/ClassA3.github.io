@@ -474,6 +474,21 @@
                 "fullAddress": "חיים זכאי 2 דירה 6 פתח תקווה",
                 "FIELD12": "",
                 "FIELD13": ""
+            },
+            {
+                "firstName": "המורה יפית",
+                "lastName": "קינן",
+                "paren1": "יפית",
+                "parent1Phone": 972528092008,
+                "paren2": "",
+                "paren2Phone": "",
+                "address": "",
+                "picture": "teacher.jpg",
+                "dateBirth": "",
+                "gender": "girl",
+                "fullAddress": "",
+                "FIELD12": "",
+                "FIELD13": ""
             }
         ];
 
@@ -515,14 +530,13 @@
                     var kidGenderValue = allStudents[i][columns[9]];
                     var kidGenderClassValue = "BoyName";
                     if (kidGenderValue != "boy")
-                        kidGenderClassValue = "GirlName"                    
-                    kidName$ = $('<tr><td class=' + kidGenderClassValue +'>' + kidNameValue + '</td></tr>');
+                        kidGenderClassValue = "GirlName"
+                    kidName$ = $('<tr><td class=' + kidGenderClassValue + '>' + kidNameValue + '</td></tr>');
                     kidName1$ = $('<tr><td class="BoyName">' + kidNameValue + '</td></tr>');
                     kidTable$.append(kidName$);
 
                     var parent1NameValue = allStudents[i][columns[2]];
                     var parent1PhoneValue = allStudents[i][columns[3]];
-                    var parent1_1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png">' + parent1NameValue + '</button></td></tr>'));
                     var parent1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png"></button>' + parent1NameValue + '</td></tr>'));
                     kidTable$.append(parent1$);
 
@@ -536,10 +550,9 @@
 
                     var addressValue = allStudents[i][columns[6]];
                     var fullAddressValue = allStudents[i][columns[10]];
-                    var address_1$ = ($('<tr> <td> <button class="button-4" onclick="location.href=\'https://maps.google.com/maps?q=' + fullAddressValue + '\'" type="button"><img class="btnImg" src="Icons/googlemaps.png">' + addressValue + '</button></td></tr>'));
                     var address$ = ($('<tr> <td> <button class="button-4" onclick="location.href=\'https://maps.google.com/maps?q=' + fullAddressValue + '\'" type="button"><img class="btnImg" src="Icons/googlemaps.png"></button>' + addressValue + '</td></tr>'));
-
-                    kidTable$.append(address$);
+                    if (addressValue != "")
+                        kidTable$.append(address$);
 
                     kidTable$.append('</table>');
 
@@ -591,9 +604,10 @@
 
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 4.1.2
-     
-    <div id="excelDataTable"/>
-     
+    ver 4.1.3
+
+    <div id="excelDataTable" />
+
+
 </body>
 </html>
