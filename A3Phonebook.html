@@ -522,7 +522,7 @@
 
                     var parent1NameValue = allStudents[i][columns[2]];
                     var parent1PhoneValue = allStudents[i][columns[3]];
-                    var parent1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg" src="Icons/icons8-whatsapp-50.png">' + parent1NameValue + '</button></td></tr>'));
+                    var parent1$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent1PhoneValue + '\' type="button"> <img class="btnImg"  src="Icons/icons8-whatsapp-50.png">' + parent1NameValue + '</button></td></tr>'));
                     kidTable$.append(parent1$);
 
 
@@ -598,10 +598,9 @@
 
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 4.0.11
+    ver 4.0.12
      
     <div id="excelDataTable" border="1"/>
      
-
 </body>
 </html>
