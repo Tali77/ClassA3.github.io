@@ -1,6 +1,6 @@
 * {
     font-family: Arial;
-    font-size: 60;
+    font-size: 30px;
 }
 
 div.box {
@@ -32,7 +32,7 @@ a {
     text-decoration: none;
     color: black;
 }
-
+/*
 label.GirlName {
     color: red;
     padding: 8px;
@@ -62,7 +62,7 @@ label {
     -moz-box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
     -box-shadow: -0.25px 0.75px 9px -0.25px rgba(85,85,85,0.36);
 }
-
+    */
 th, td {
     padding: 10px;
 }
@@ -73,7 +73,7 @@ th, td {
     }
 
     td.BoyName {
-        color: blue;
+        color: blue;60
         font-weight: bold;
     }
 
