@@ -16,6 +16,19 @@ div.box
   margin: 20px;
 }
 
+
+table.box {
+	border-radius: 25px;
+	background-color: #94f9d6;
+	background-image: linear-gradient(90deg, #94f9d6 0%, #eafdfd 100%);
+	background-position: left top;
+	background-repeat: repeat;
+	padding: 30px;
+	width: 870px;
+	height: 360px;
+	margin: 20px;
+}
+
 a { text-decoration: none; color: black;}
 
 label.GirlName
