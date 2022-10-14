@@ -501,7 +501,7 @@
 
                 var kidTable$ = $('<table class="box" border="1"/>');
 
-               // var row$ = $('<tr/>');
+                // var row$ = $('<tr/>');
                 var KidPicValue = allStudents[i][columns[7]];
                 var kidPic$ = $('<tr><td rowspan="5"> <img class="Picture"  src="KidPic/' + KidPicValue + '"></td></tr>');
                 kidTable$.append(kidPic$);
@@ -509,11 +509,15 @@
                 for (var colIndex = 0; colIndex < columns.length; colIndex = columns.length) {
                     var cellValue = allStudents[i][columns[colIndex]];
                     if (cellValue == null) cellValue = "";
-                   // row$.append($('<td/>').html(cellValue));
+                    // row$.append($('<td/>').html(cellValue));
 
                     var kidNameValue = allStudents[i][columns[0]] + ' ' + allStudents[i][columns[1]];
-                    
-                    kidName$ = $('<tr><td class="BoyName">' + kidNameValue + '</td></tr>');
+                    var kidGenderValue = allStudents[i][columns[9]];
+                    var kidGenderClassValue = "BoyName";
+                    if (kidGenderValue != "boy")
+                        kidGenderClassValue = "GirlName"                    
+                    kidName$ = $('<tr><td class=' + kidGenderClassValue +'>' + kidNameValue + '</td></tr>');
+                    kidName1$ = $('<tr><td class="BoyName">' + kidNameValue + '</td></tr>');
                     kidTable$.append(kidName$);
 
                     var parent1NameValue = allStudents[i][columns[2]];
@@ -523,11 +527,11 @@
 
 
                     var parent2NameValue = allStudents[i][columns[4]];
-                    
+
                     var parent2PhoneValue = allStudents[i][columns[5]];
                     var parent2$ = ($('<tr> <td> <button class="button-4" onclick=location.href=\'https://api.whatsapp.com/send?phone=' + parent2PhoneValue + '\' type="button"> <img class="btnImg" src="Icons/icons8-whatsapp-50.png">' + parent2NameValue + '</button></td></tr>'));
                     if (parent2NameValue != "")
-                    kidTable$.append(parent2$);
+                        kidTable$.append(parent2$);
 
                     var addressValue = allStudents[i][columns[6]];
                     var fullAddressValue = allStudents[i][columns[10]];
@@ -594,13 +598,10 @@
 
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    ver 4.0.7
-    <table><tr><td class="BoyName">bbb</td></tr></table>
-    <table><tr><td class="GirlName">ggg</td></tr></table>
-    <div id="excelDataTable" border="1">
-
-    </div>
-
+    ver 4.0.8
+     
+    <div id="excelDataTable" border="1"/>
+     
 
 </body>
 </html>
