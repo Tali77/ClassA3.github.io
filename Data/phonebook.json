@@ -67,7 +67,7 @@
    "paren2": "ארטם",
    "paren2Phone": 972549936539,
    "address": "העצמאות 73",
-   "picture": "Emili.jpg",
+   "picture": "",
    "dateBirth": "",
    "gender": "girl",
    "fullAddress": "העצמאות 73 דירה 13 פתח תקווה",
@@ -221,21 +221,6 @@
    "dateBirth": "",
    "gender": "girl",
    "fullAddress": "יוסף נקר 33 דירה 6 פתח תקווה",
-   "FIELD12": "",
-   "FIELD13": ""
- },
- {
-   "firstName": "המורה יפית",
-   "lastName": "קינן",
-   "paren1": "",
-   "parent1Phone": 972528092008,
-   "paren2": "",
-   "paren2Phone": null,
-   "address": "",
-   "picture": "teacher.jpg",
-   "dateBirth": "",
-   "gender": "girl",
-   "fullAddress": "",
    "FIELD12": "",
    "FIELD13": ""
  },
@@ -476,6 +461,21 @@
    "dateBirth": "",
    "gender": "girl",
    "fullAddress": "חיים זכאי 2 דירה 6 פתח תקווה",
+   "FIELD12": "",
+   "FIELD13": ""
+ },
+ {
+   "firstName": "המורה יפית",
+   "lastName": "קינן",
+   "paren1": "",
+   "parent1Phone": 972528092008,
+   "paren2": "",
+   "paren2Phone": null,
+   "address": "",
+   "picture": "teacher.jpg",
+   "dateBirth": "",
+   "gender": "girl",
+   "fullAddress": "",
    "FIELD12": "",
    "FIELD13": ""
  }
