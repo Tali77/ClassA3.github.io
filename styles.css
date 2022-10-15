@@ -55,6 +55,11 @@ img.Picture {
     border-radius: 25px;
 }
 
+p.CopyRights{
+    text-align: center;
+    font-size: 15px;
+}
+
 
 img.btnImg {
     width: 30px;

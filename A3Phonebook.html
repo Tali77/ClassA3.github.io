@@ -493,22 +493,6 @@
         ];
 
         // Builds the HTML Table out of allStudents.
-        function buildHtmlTable_ORG(selector) {
-            var columns = addAllColumnHeaders(allStudents, selector);
-
-            for (var i = 0; i < allStudents.length; i++) {
-                var row$ = $('<tr/>');
-                for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-                    var cellValue = allStudents[i][columns[colIndex]];
-                    if (cellValue == null) cellValue = "";
-                    row$.append($('<td/>').html(cellValue));
-                }
-                $(selector).append(row$);
-            }
-        }
-
-
-        // Builds the HTML Table out of allStudents.
         function buildHtmlTable(selector) {
             var columns = addAllColumnHeaders(allStudents, selector);
 
@@ -555,33 +539,20 @@
                         kidTable$.append(address$);
 
                     kidTable$.append('</table>');
-
                 }
-                $(selector).append(kidTable$);
+                $(selector).append(kidTable$);    
+
+               
 
             }
+            $(document).ready(function () {
+                var copyRights$ = ($('<p class="CopyRights">Tali Shmueli © </p>'));
+                $(selector).append(copyRights$);
+            });
         }
         // Adds a header row to the table and returns the set of columns.
         // Need to do union of keys from all records as some records may not contain
-        // all records.
-        function addAllColumnHeaders_ORG(allStudents, selector) {
-            var columnSet = [];
-            var headerTr$ = $('<tr/>');
-
-            for (var i = 0; i < allStudents.length; i++) {
-                var rowHash = allStudents[i];
-                for (var key in rowHash) {
-                    if ($.inArray(key, columnSet) == -1) {
-                        columnSet.push(key);
-                        headerTr$.append($('<th/>').html(key));
-                    }
-                }
-            }
-            $(selector).append(headerTr$);
-
-            return columnSet;
-        }
-
+        // all records.     
         function addAllColumnHeaders(allStudents, selector) {
             var columnSet = [];            
 
@@ -592,16 +563,17 @@
                         columnSet.push(key);
                     }
                 }
-            }
+            }          
             return columnSet;
-        }
+        }       
     </script>
 </head>
 
 
-<body onLoad="buildHtmlTable('#excelDataTable')">    
+<body onLoad="buildHtmlTable('#excelDataTable')" >
 
-    <div id="excelDataTable" />
+    <div id="excelDataTable"/>
+    <p ></p>
 
 </body>
 </html>
